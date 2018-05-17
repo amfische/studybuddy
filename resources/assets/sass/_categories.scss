@@ -1,0 +1,21 @@
+.categories {
+	h1 {
+		margin: 50px 0;
+	}
+	a.back-link {
+		display: inline-block;
+		margin: 25px 0;
+	}
+	a:hover {
+		text-decoration: none;
+	}
+	.questions-heading {
+		margin-bottom: 1rem;
+		i:hover {
+			cursor: pointer;
+		}
+	}
+	.list-group-item:hover {
+		cursor: pointer;
+	}
+}

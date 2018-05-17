@@ -1,0 +1,19 @@
+
+// Fonts
+@import url("https://fonts.googleapis.com/css?family=Raleway:300,400,600");
+
+// Variables
+@import "variables";
+
+// Bootstrap
+@import '~bootstrap/scss/bootstrap';
+
+// Welcome Page 
+@import "welcomePage";
+
+// Cards Index Page 
+@import "categories";
+
+.nav-item {
+	margin: 0 10px; 
+}
