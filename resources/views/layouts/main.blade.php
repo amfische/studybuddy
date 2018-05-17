@@ -14,24 +14,24 @@
 
 </head>
 <body>
-	<nav class="navbar navbar-expand bg-info">
+	{{-- <nav class="navbar navbar-expand bg-info">
 		<div class="container d-flex justify-content-end">
 			<ul class="navbar-nav">
-{{-- 				<li class="nav-item">
+				<li class="nav-item">
 					<button type="button" class="btn btn-light btn-sm" data-toggle="modal" data-target="#addCard">Add Card</button>
-				</li> --}}
+				</li>
 				<li class="nav-item">
 					<button type="button" class="btn btn-light btn-sm" data-toggle="modal" data-target="#addCategory">Add Category</button>
 				</li>
 			</ul>
 		</div>
-	</nav>
+	</nav> --}}
 
 	<div class="container" id="app">
 		@yield('content')	
 	</div>
 	
-	@include('modals.add-category')
+	{{-- @include('modals.add-category') --}}
 	{{-- @include('modals.add-flashcard') --}}
 
 	<script src="{{ asset('js/app.js') }}"></script>

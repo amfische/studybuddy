@@ -21,13 +21,7 @@
 				<h3>Questions</h3>
 				<i class="fas fa-plus-square fa-2x text-success" data-toggle="modal" data-target="#addCard"></i>
 			</div>			
-			{{-- <ul class="list-group">
-				@foreach($cards as $card)
-					<li class="list-group-item">
-						{{ $card->question }}
-					</li>
-				@endforeach
-			</ul> --}}
+
 			<question-list :cards="{{ $cards }}"></question-list>
 		</div>
 		
