@@ -10442,15 +10442,20 @@ a.text-dark:focus {
   /* Categories show.blade.php */
 }
 
-.categories .heading {
+.categories .heading-index {
   margin: 30px 15px;
   padding-bottom: 15px;
   border-bottom: 2px solid #d3d3d3;
 }
 
-.categories .heading h1 {
+.categories .heading-show {
+  padding: 0 5px;
+}
+
+.categories h1 {
   margin: 0;
   font-family: 'Architects Daughter', cursive;
+  font-size: 4rem;
 }
 
 .categories .card-title {
@@ -10465,6 +10470,15 @@ a.text-dark:focus {
 
 .categories a:hover {
   text-decoration: none;
+}
+
+.categories .table-responsive {
+  margin-top: 2rem;
+}
+
+.categories tr.extra-row i.disable {
+  color: #d3d3d3;
+  text-decoration: line-through;
 }
 
 .categories .questions-heading {

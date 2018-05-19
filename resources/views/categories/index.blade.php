@@ -10,7 +10,7 @@
     </div>
 	@endif --}}
 	
-	<div class="heading d-flex justify-content-between align-items-center">
+	<div class="heading-index d-flex justify-content-between align-items-center">
 		<h1>Choose a Category</h1>
 		<i class="fas fa-plus-square fa-2x text-success" data-toggle="modal" data-target="#addCategory"></i>
 	</div>

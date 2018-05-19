@@ -17,18 +17,26 @@ class CategoriesController extends Controller
 	public function show($id)
   {
     $category = Category::find($id);
-    $cards = Flashcard::where('category_id', $id)->get();
+    $cards = Flashcard::where('category_id', $id)->paginate(5);
 
-    $categories = array();
-    foreach (Category::all() as $c) {
-    	$categories[$c->id] = $c->name;
+    // $categories = array();
+    // foreach (Category::all() as $c) {
+    // 	$categories[$c->id] = $c->name;
+    // }
+
+    $offset = 5;
+    if (count($cards) % 5 !== 0) {
+      $offset = (ceil(count($cards)/5) * 5) - count($cards);
+    } else if (count($cards) % 5 === 0) {
+      $offset = 0;
     }
 
     $data = [
     	'category' => $category,
-    	'categories' => $categories,
-    	'cards' => $cards
+    	'cards' => $cards,
+      'offset' => $offset
     ];
+    // return $data;
 
   	return view('categories.show', $data);
   }

@@ -1,12 +1,18 @@
 .categories {
-	.heading {
+	.heading-index {
 		margin: 30px 15px;
 		padding-bottom: 15px;
 		border-bottom: 2px solid #d3d3d3;
-		h1 {
-			margin: 0;
-			font-family: 'Architects Daughter', cursive;
-		}	
+	}
+
+	.heading-show {
+		padding: 0 5px;
+	}
+
+	h1 {
+		margin: 0;
+		font-family: 'Architects Daughter', cursive;
+		font-size: 4rem;
 	}
 
 	.card-title {
@@ -21,6 +27,13 @@
 	}
 	a:hover {
 		text-decoration: none;
+	}
+	.table-responsive {
+		margin-top: 2rem;
+	}
+	tr.extra-row i.disable {
+		color: #d3d3d3;
+		text-decoration: line-through;
 	}
 	.questions-heading {
 		margin-bottom: 1rem;
