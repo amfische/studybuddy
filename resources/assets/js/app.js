@@ -22,3 +22,10 @@ Vue.component('flashcard', require('./components/Flashcard.vue'));
 const app = new Vue({
   el: '#categories-instance'
 });
+
+
+/**
+ * Bootstrap Modal Javascript
+ */
+
+require('./flashcards');

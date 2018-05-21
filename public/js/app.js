@@ -13976,7 +13976,7 @@ module.exports = Cancel;
 /***/ (function(module, exports, __webpack_require__) {
 
 __webpack_require__(13);
-module.exports = __webpack_require__(49);
+module.exports = __webpack_require__(50);
 
 
 /***/ }),
@@ -14007,6 +14007,12 @@ Vue.component('flashcard', __webpack_require__(46));
 var app = new Vue({
   el: '#categories-instance'
 });
+
+/**
+ * Bootstrap Modal Javascript
+ */
+
+__webpack_require__(49);
 
 /***/ }),
 /* 14 */
@@ -47599,6 +47605,21 @@ if (false) {
 
 /***/ }),
 /* 49 */
+/***/ (function(module, exports) {
+
+$('#editCard').on('show.bs.modal', function (event) {
+  var button = $(event.relatedTarget);
+  var data = button.data('info');
+
+  var modal = $(this);
+  modal.find('input[type=text]').val(data.question);
+  modal.find('textarea').val(data.answer);
+
+  console.log(data);
+});
+
+/***/ }),
+/* 50 */
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin

@@ -39,7 +39,7 @@
 						<td>{{ $card->question }}</td>
 						<td><input type="checkbox"></td>
 						<td><i class="fas fa-eye"></i></td>
-						<td><i class="fas fa-edit"></i></td>
+						<td><i class="fas fa-edit" data-toggle="modal" data-target="#editCard" data-info="{{ $card }}"></i></td>
 						<td><i class="fas fa-trash-alt"></i></td>
 					</tr>
 				@endforeach
@@ -64,5 +64,6 @@
 {{-- <flashcard></flashcard> --}}
 
 @include('modals.add-flashcard')
+@include('modals.edit-flashcard')
 
 @endsection

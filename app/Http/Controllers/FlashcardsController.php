@@ -27,4 +27,9 @@ class FlashcardsController extends Controller
 
     return back()->with('status', 'Flashcard Created');
   }
+
+  public function update($id)
+  {
+    
+  }
 }

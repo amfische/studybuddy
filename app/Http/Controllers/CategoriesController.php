@@ -27,7 +27,7 @@ class CategoriesController extends Controller
     $offset = 5;
     if (count($cards) % 5 !== 0) {
       $offset = (ceil(count($cards)/5) * 5) - count($cards);
-    } else if (count($cards) % 5 === 0) {
+    } else if (count($cards) % 5 === 0 && count($cards)) {
       $offset = 0;
     }
 
