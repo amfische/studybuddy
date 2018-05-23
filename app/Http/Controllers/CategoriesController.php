@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use GrahamCampbell\Markdown\Facades\Markdown;
 use Illuminate\Http\Request;
 use App\Category;
 use App\Flashcard;
@@ -18,6 +19,10 @@ class CategoriesController extends Controller
   {
     $category = Category::find($id);
     $cards = Flashcard::where('category_id', $id)->paginate(5);
+
+    foreach ($cards as $card) {
+      $card->question = Markdown::convertToHtml($card->question);
+    }
 
     // $categories = array();
     // foreach (Category::all() as $c) {

@@ -10,7 +10,9 @@
     </div>
 	@endif
 
-	<a href="{{ action('CategoriesController@show', [$card->category_id]) }}" class="back-link"><i class="far fa-arrow-alt-circle-left"></i> Back to {{$card->category}}</a>
+	<a href="{{ action('CategoriesController@show', [$card->category_id]) }}" class="back-link">
+		<i class="far fa-arrow-alt-circle-left"></i> Back to {{$card->category}}
+	</a>
 
 	{{ Form::open(['action' => ['FlashcardsController@update', $card->category_id, $card->id ], 'method' => 'put']) }}
 		<text-area-block card-data="{{ $card->question }}" type="question" size="5"></text-area-block>

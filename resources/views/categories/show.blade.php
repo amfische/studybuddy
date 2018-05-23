@@ -36,10 +36,9 @@
 				@foreach($cards as $card)
 					<tr class="text-center">
 						<td>{{ $card->id }}</td>
-						<td>{{ $card->question }}</td>
+						<td>{!! $card->question !!}</td>
 						<td><input type="checkbox"></td>
 						<td><i class="fas fa-eye"></i></td>
-						{{-- <td><i class="fas fa-edit" data-toggle="modal" data-target="#editCard" data-info="{{ $card }}"></i></td> --}}
 						<td><a href="{{ action('FlashcardsController@edit', ['flashcard' => $card->id, 'category' => $card->category_id]) }}"><i class="fas fa-edit"></i></a></td>
 						<td><i class="fas fa-trash-alt"></i></td>
 					</tr>
