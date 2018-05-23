@@ -7,6 +7,8 @@
 
 require('./bootstrap');
 
+window.marked = require('marked');
+
 window.Vue = require('vue');
 
 /**
@@ -18,9 +20,11 @@ window.Vue = require('vue');
 Vue.component('example-component', require('./components/ExampleComponent.vue'));
 Vue.component('question-list', require('./components/QuestionList.vue'));
 Vue.component('flashcard', require('./components/Flashcard.vue'));
+Vue.component('text-input-block', require('./components/TextInputBlock.vue'));
+Vue.component('text-area-block', require('./components/TextAreaBlock.vue'));
 
 const app = new Vue({
-  el: '#categories-instance'
+  el: '#app'
 });
 
 

@@ -18,8 +18,8 @@ Route::get('/', function () {
 Route::get('/flashcards', 'FlashcardsController@index');
 Route::post('/flashcards', 'FlashcardsController@store');
 Route::get('/flashcards/create', 'FlashcardsController@create');
-Route::get('/flashcards/{id}/edit', 'FlashcardsController@edit');
-Route::put('/flashcards/{id}/update', 'FlashcardsController@update');
+Route::get('/flashcards/{flashcard}/edit', 'FlashcardsController@edit');
+Route::put('/flashcards/{flashcard}/update', 'FlashcardsController@update');
 
 Route::get('/categories', 'CategoriesController@index');
 Route::get('/categories/{id}', 'CategoriesController@show');
