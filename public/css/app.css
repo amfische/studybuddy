@@ -10493,6 +10493,33 @@ a.text-dark:focus {
   cursor: pointer;
 }
 
+.flashcards a.back-link {
+  display: inline-block;
+  margin: 25px 0;
+}
+
+.flashcards h1.heading {
+  margin: 45px 0;
+  padding: 12px 0;
+  border-bottom: 1.5px solid black;
+  font-family: 'Architects Daughter', cursive;
+}
+
+.flashcards .markdown-container div {
+  overflow: auto;
+  background-color: #343a40;
+  border: 1px solid #368add;
+  color: #fff;
+}
+
+.flashcards .markdown-container textarea {
+  border: 1px solid #368add;
+}
+
+.flashcards input[type=submit] {
+  margin: 15px 0;
+}
+
 .nav-item {
   margin: 0 10px;
 }

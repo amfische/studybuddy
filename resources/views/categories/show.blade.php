@@ -2,7 +2,7 @@
 
 @section('content')
 
-<section class="categories" id="categories-instance">
+<section class="categories">
 
 	@if (session('status'))
     <div class="alert alert-success">
@@ -40,7 +40,7 @@
 						<td><input type="checkbox"></td>
 						<td><i class="fas fa-eye"></i></td>
 						{{-- <td><i class="fas fa-edit" data-toggle="modal" data-target="#editCard" data-info="{{ $card }}"></i></td> --}}
-						<td><a href="{{ action('FlashcardsController@edit', ['id' => $card->id]) }}"><i class="fas fa-edit"></i></a></td>
+						<td><a href="{{ action('FlashcardsController@edit', ['flashcard' => $card->id, 'category' => $card->category_id]) }}"><i class="fas fa-edit"></i></a></td>
 						<td><i class="fas fa-trash-alt"></i></td>
 					</tr>
 				@endforeach
@@ -64,7 +64,7 @@
 {{-- <question-list :cards="{{ $cards }}"></question-list> --}}
 {{-- <flashcard></flashcard> --}}
 
-@include('modals.add-flashcard')
-@include('modals.edit-flashcard')
+{{-- @include('modals.add-flashcard')
+@include('modals.edit-flashcard') --}}
 
 @endsection

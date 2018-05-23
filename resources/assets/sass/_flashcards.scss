@@ -1,0 +1,29 @@
+.flashcards {
+	a.back-link {
+		display: inline-block;
+		margin: 25px 0;
+	}
+
+	h1.heading {
+		margin: 45px 0;
+		padding: 12px 0;
+		border-bottom: 1.5px solid black;
+		font-family: 'Architects Daughter', cursive;
+	}
+
+	.markdown-container {
+		div {
+			overflow: auto;
+			background-color: #343a40;
+			border: 1px solid #368add;
+			color: #fff;
+		}
+		textarea {
+			border: 1px solid #368add;
+		}
+	}
+
+	input[type=submit] {
+		margin: 15px 0;
+	}
+}

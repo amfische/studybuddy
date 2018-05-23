@@ -28,12 +28,14 @@ class FlashcardsController extends Controller
     return back()->with('status', 'Flashcard Created');
   }
 
-  public function edit(Flashcard $flashcard)
+  public function edit(Category $category, Flashcard $flashcard)
   {
+    // dd($category, $flashcard);
+
     return view('flashcards.edit', ['card' => $flashcard]);
   }
 
-  public function update(Request $request, Flashcard $flashcard)
+  public function update(Request $request, Category $category, Flashcard $flashcard)
   {
     // dd($request->all(), $flashcard);
     $flashcard->question = $request->question;

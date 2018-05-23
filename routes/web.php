@@ -16,10 +16,10 @@ Route::get('/', function () {
 });
 
 Route::get('/flashcards', 'FlashcardsController@index');
-Route::post('/flashcards', 'FlashcardsController@store');
-Route::get('/flashcards/create', 'FlashcardsController@create');
-Route::get('/flashcards/{flashcard}/edit', 'FlashcardsController@edit');
-Route::put('/flashcards/{flashcard}/update', 'FlashcardsController@update');
+Route::post('/categories/{category}/flashcard/create', 'FlashcardsController@store');
+Route::get('/categories/{category}/flashcard/create', 'FlashcardsController@create');
+Route::get('/categories/{category}/flashcard/{flashcard}', 'FlashcardsController@edit');
+Route::put('/categories/{category}/flashcard/{flashcard}', 'FlashcardsController@update');
 
 Route::get('/categories', 'CategoriesController@index');
 Route::get('/categories/{id}', 'CategoriesController@show');
