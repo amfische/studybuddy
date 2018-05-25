@@ -1,5 +1,5 @@
 <template>
-  <div class="row">
+  <div class="row text-area-block">
     <div class="col-sm-12">
       <h1 class="text-center heading">{{ label }}</h1>
     </div>

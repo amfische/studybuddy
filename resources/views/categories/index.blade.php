@@ -11,8 +11,8 @@
 	@endif --}}
 	
 	<div class="heading-index d-flex justify-content-between align-items-center">
-		<h1>Choose a Category</h1>
-		<i class="fas fa-plus-square fa-2x text-success" data-toggle="modal" data-target="#addCategory"></i>
+		<h1>Categories</h1>
+		<button class="btn btn-info" data-toggle="modal" data-target="#addCategory">Add Category</button>
 	</div>
 	
 

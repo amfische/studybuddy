@@ -1,8 +1,8 @@
 .categories {
+	/* index.blade.php */
 	.heading-index {
-		margin: 30px 15px;
-		padding-bottom: 15px;
-		border-bottom: 2px solid #d3d3d3;
+		margin: 30px 0;
+		border-bottom: 2px solid #000;
 	}
 
 	.heading-show {
@@ -11,16 +11,16 @@
 
 	h1 {
 		margin: 0;
-		font-family: 'Architects Daughter', cursive;
+		font-family: 'Roboto', sans-serif;
 		font-size: 4rem;
 	}
 
 	.card-title {
 		margin: 0;
-		font-family: 'Architects Daughter', cursive;
+		font-family: 'Montserrat', sans-serif;
 	}
 	
-	/* Categories show.blade.php */
+	/* show.blade.php */
 	a.back-link {
 		display: inline-block;
 		margin: 25px 0;

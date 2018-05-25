@@ -16,19 +16,18 @@
 		<h1>{{ $category->name }}</h1>	
 		<div class="actions">
 			<button class="btn btn-success">Study</button>
-			<button class="btn btn-info" data-toggle="modal" data-target="#addCard">Add <i class="fas fa-plus-square"></i></button>
+			<button class="btn btn-info" data-toggle="modal" data-target="#addCard">Add Flashcard</button>
 		</div>
 	</div>
 
 	<div class="table-responsive">
 		<table class="table table-bordered">
-			<thead>
+			<thead class="thead-dark">
 				<tr>
 					<th scope="col">ID</th>
 					<th scope="col">Question</th>
 					<th scope="col">Known</th>
-					<th scope="col">Review</th>
-					<th scope="col">Edit</th>
+					<th scope="col">Review/Edit</th>
 					<th scope="col">Delete</th>
 				</tr>
 			</thead>
@@ -38,7 +37,6 @@
 						<td>{{ $card->id }}</td>
 						<td>{!! $card->question !!}</td>
 						<td><input type="checkbox"></td>
-						<td><i class="fas fa-eye"></i></td>
 						<td><a href="{{ action('FlashcardsController@edit', ['flashcard' => $card->id, 'category' => $card->category_id]) }}"><i class="fas fa-edit"></i></a></td>
 						<td><i class="fas fa-trash-alt"></i></td>
 					</tr>
@@ -46,9 +44,8 @@
 				@for($i = 0; $i < $offset; $i++)
 					<tr class="text-center extra-row">
 						<td>#</td>
-						<td data-toggle="modal" data-target="#addCard">Add Question <i class="fas fa-plus-square"></i></td>
+						<td data-toggle="modal" data-target="#addCard"><p>Add Question <i class="fas fa-plus-square"></i></p></td>
 						<td><input type="checkbox" disabled></td>
-						<td><i class="fas fa-eye disable"></i></td>
 						<td><i class="fas fa-edit disable"></i></td>
 						<td><i class="fas fa-trash-alt disable"></i></td>
 					</tr>

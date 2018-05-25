@@ -1,4 +1,4 @@
-@import url(https://fonts.googleapis.com/css?family=Raleway:300,400,600);@import url(https://fonts.googleapis.com/css?family=Architects+Daughter|Roboto);/*!
+@import url(https://fonts.googleapis.com/css?family=Raleway:300,400,600);@import url(https://fonts.googleapis.com/css?family=Montserrat|Roboto);/*!
  * Bootstrap v4.1.1 (https://getbootstrap.com/)
  * Copyright 2011-2018 The Bootstrap Authors
  * Copyright 2011-2018 Twitter, Inc.
@@ -10439,13 +10439,13 @@ a.text-dark:focus {
 }
 
 .categories {
-  /* Categories show.blade.php */
+  /* index.blade.php */
+  /* show.blade.php */
 }
 
 .categories .heading-index {
-  margin: 30px 15px;
-  padding-bottom: 15px;
-  border-bottom: 2px solid #d3d3d3;
+  margin: 30px 0;
+  border-bottom: 2px solid #000;
 }
 
 .categories .heading-show {
@@ -10454,13 +10454,13 @@ a.text-dark:focus {
 
 .categories h1 {
   margin: 0;
-  font-family: 'Architects Daughter', cursive;
+  font-family: 'Roboto', sans-serif;
   font-size: 4rem;
 }
 
 .categories .card-title {
   margin: 0;
-  font-family: 'Architects Daughter', cursive;
+  font-family: 'Montserrat', sans-serif;
 }
 
 .categories a.back-link {
@@ -10493,16 +10493,27 @@ a.text-dark:focus {
   cursor: pointer;
 }
 
+.flashcards {
+  font-family: 'Roboto', sans-serif;
+}
+
 .flashcards a.back-link {
   display: inline-block;
-  margin: 25px 0;
+  margin-top: 25px;
 }
 
 .flashcards h1.heading {
-  margin: 45px 0;
+  margin: 15px 0;
   padding: 12px 0;
   border-bottom: 1.5px solid black;
-  font-family: 'Architects Daughter', cursive;
+}
+
+.flashcards .text-area-block {
+  margin-bottom: 40px;
+}
+
+.flashcards .markdown-container {
+  font-family: 'Montserrat', sans-serif;
 }
 
 .flashcards .markdown-container div {

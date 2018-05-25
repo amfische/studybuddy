@@ -49404,7 +49404,7 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c("div", { staticClass: "row" }, [
+  return _c("div", { staticClass: "row text-area-block" }, [
     _c("div", { staticClass: "col-sm-12" }, [
       _c("h1", { staticClass: "text-center heading" }, [
         _vm._v(_vm._s(_vm.label))
