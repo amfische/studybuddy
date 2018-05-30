@@ -9,15 +9,15 @@ use App\Flashcard;
 class FlashcardsController extends Controller
 {
 
-  public function create(Request $request)
+  public function create(Category $category)
   {
-  	return view('flashcards.create');
+  	return view('flashcards.create', ['category' => $category]);
   }
 
-  public function store(Request $request)
+  public function store(Request $request, Category $category)
   {
-    $category = Category::find($request->category_id);
-
+    dd($category);
+    
     $f = new Flashcard;
     $f->category_id = $request->category_id;
     $f->question = $request->question;

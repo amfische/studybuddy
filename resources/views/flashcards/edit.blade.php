@@ -11,7 +11,7 @@
 	@endif
 
 	<a href="{{ action('CategoriesController@show', [$card->category_id]) }}" class="back-link">
-		<i class="far fa-arrow-alt-circle-left"></i> Back to {{$card->category}}
+		<i class="far fa-arrow-alt-circle-left"></i> Back to {{ $card->category->name }}
 	</a>
 
 	<div class="heading-show d-flex flex-column align-items-end">

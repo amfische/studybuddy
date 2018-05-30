@@ -16,7 +16,7 @@
 		<h1>{{ $category->name }}</h1>	
 		<div class="actions">
 			<button class="btn btn-success">Study</button>
-			<button class="btn btn-info" data-toggle="modal" data-target="#addCard">Add Flashcard</button>
+			<a href="{{ action('FlashcardsController@create', ['category' => $category->id]) }}" class="btn btn-info">Add Flashcard</a>
 		</div>
 	</div>
 
@@ -44,7 +44,7 @@
 				@for($i = 0; $i < $offset; $i++)
 					<tr class="text-center extra-row">
 						<td>#</td>
-						<td data-toggle="modal" data-target="#addCard"><p>Add Question <i class="fas fa-plus-square"></i></p></td>
+						<td><a href="{{ action('FlashcardsController@create', ['category' => $category->id]) }}">Add Question <i class="fas fa-plus-square"></i></a></td>
 						<td><input type="checkbox" disabled></td>
 						<td><i class="fas fa-edit disable"></i></td>
 						<td><i class="fas fa-trash-alt disable"></i></td>
