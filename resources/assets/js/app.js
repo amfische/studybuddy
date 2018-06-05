@@ -17,11 +17,8 @@ window.Vue = require('vue');
  * or customize the JavaScript scaffolding to fit your unique needs.
  */
 
-Vue.component('example-component', require('./components/ExampleComponent.vue'));
-Vue.component('question-list', require('./components/QuestionList.vue'));
-Vue.component('flashcard', require('./components/Flashcard.vue'));
-Vue.component('text-input-block', require('./components/TextInputBlock.vue'));
 Vue.component('text-area-block', require('./components/TextAreaBlock.vue'));
+Vue.component('checkmark', require('./components/Checkmark.vue'));
 
 const app = new Vue({
   el: '#app'

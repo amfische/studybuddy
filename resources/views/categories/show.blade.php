@@ -36,7 +36,8 @@
 					<tr class="text-center">
 						<td>{{ $card->id }}</td>
 						<td>{!! $card->question !!}</td>
-						<td><input type="checkbox"></td>
+						{{-- <td><input type="checkbox"></td> --}}
+						<td><checkmark :id="{{ $card->id }}" :studied="{{ $card->known }}"></checkmark></td>
 						<td><a href="{{ action('FlashcardsController@edit', ['flashcard' => $card->id, 'category' => $card->category_id]) }}"><i class="fas fa-edit"></i></a></td>
 						<td><i class="fas fa-trash-alt"></i></td>
 					</tr>

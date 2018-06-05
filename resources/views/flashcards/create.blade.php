@@ -24,7 +24,7 @@
 		<text-area-block card-data="" type="answer" size="20"></text-area-block>
 		<div class="row">
 			<div class="col-sm-12 d-flex justify-content-end">
-				<input type="submit" class="btn btn-primary btn-md" value="Update">
+				<input type="submit" class="btn btn-primary btn-md" value="Create">
 			</div>
 		</div>		
 	{{ Form::close() }}

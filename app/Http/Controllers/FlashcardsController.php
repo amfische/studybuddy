@@ -44,4 +44,13 @@ class FlashcardsController extends Controller
 
     return view('flashcards.edit', ['card' => $flashcard]);
   }
+
+  public function statusUpdate(Request $request) 
+  {
+    $f = Flashcard::find($request->id);
+    $f->known = $request->checked ? 1 : 0;
+    $f->save();
+
+    return 'success';
+  }
 }
