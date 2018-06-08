@@ -61,4 +61,10 @@ class CategoriesController extends Controller
     return redirect('flash-cards')->with('status', 'Category Created');
   }
 
+  public function study(Category $category)
+  {
+    $flashcards = Flashcard::where('category_id', $category->id)->get();
+    return view('categories.study', ['flashcards' => $flashcards, 'category' => $category]);
+  }
+
 }

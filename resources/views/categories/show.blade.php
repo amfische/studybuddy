@@ -15,7 +15,7 @@
 	<div class="heading-show d-flex justify-content-between align-items-center">
 		<h1>{{ $category->name }}</h1>	
 		<div class="actions">
-			<button class="btn btn-success">Study</button>
+			<a href="{{ action('CategoriesController@study', ['category' => $category->id]) }}" class="btn btn-success">Study</a>
 			<a href="{{ action('FlashcardsController@create', ['category' => $category->id]) }}" class="btn btn-info">Add Flashcard</a>
 		</div>
 	</div>
@@ -36,7 +36,6 @@
 					<tr class="text-center">
 						<td>{{ $card->id }}</td>
 						<td>{!! $card->question !!}</td>
-						{{-- <td><input type="checkbox"></td> --}}
 						<td><checkmark :id="{{ $card->id }}" :studied="{{ $card->known }}"></checkmark></td>
 						<td><a href="{{ action('FlashcardsController@edit', ['flashcard' => $card->id, 'category' => $card->category_id]) }}"><i class="fas fa-edit"></i></a></td>
 						<td><i class="fas fa-trash-alt"></i></td>

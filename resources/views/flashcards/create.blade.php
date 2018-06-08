@@ -15,7 +15,7 @@
 	</a>
 
 	<div class="heading-show d-flex flex-column align-items-end">
-		<h1>Create | {{ $category->name }}</h1>
+		<h1>Create</h1>
 		<h5>Flashcards support Markdown | <a href="https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet" target="_blank">Cheatsheet</a></h5>
 	</div>	
 

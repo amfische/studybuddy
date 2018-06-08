@@ -24,3 +24,4 @@ Route::put('/categories/{category}/flashcard/{flashcard}', 'FlashcardsController
 Route::get('/categories', 'CategoriesController@index');
 Route::get('/categories/{id}', 'CategoriesController@show');
 Route::post('/categories', 'CategoriesController@store');
+Route::get('/categories/{category}/study', 'CategoriesController@study');

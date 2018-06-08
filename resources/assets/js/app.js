@@ -19,14 +19,8 @@ window.Vue = require('vue');
 
 Vue.component('text-area-block', require('./components/TextAreaBlock.vue'));
 Vue.component('checkmark', require('./components/Checkmark.vue'));
+Vue.component('flashcards', require('./components/Flashcards.vue'));
 
 const app = new Vue({
   el: '#app'
 });
-
-
-/**
- * Bootstrap Modal Javascript
- */
-
-require('./flashcards');

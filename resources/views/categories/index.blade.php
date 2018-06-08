@@ -34,6 +34,4 @@
 
 @include('modals.add-category')
 
-
-
 @endsection
