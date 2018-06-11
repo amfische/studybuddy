@@ -25,3 +25,5 @@ Route::get('/categories', 'CategoriesController@index');
 Route::get('/categories/{id}', 'CategoriesController@show');
 Route::post('/categories', 'CategoriesController@store');
 Route::get('/categories/{category}/study', 'CategoriesController@study');
+
+Route::get('/testing', 'TestsController@testXSS');

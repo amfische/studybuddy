@@ -6,8 +6,8 @@
         <h2>{{ currentIndex + 1 }} / {{ flashcards.length }}</h2>
       </div>
       <div class="card-body">
-        <p v-if="showQuestion" v-html="question"></p>
-        <p v-else v-html="answer"></p>
+        <div v-if="showQuestion" v-html="question" class="question"></div>
+        <div v-else v-html="answer" class="answer"></div>
       </div>
       <div class="card-footer">
         <button @click="previousCard">Previous</button>
@@ -29,14 +29,11 @@
     },
     computed: {
       question() {
-        return marked(this.flashcards[this.currentIndex].question)
+        return marked(this.flashcards[this.currentIndex].question, {sanitize: true})
       },
       answer() {
-        return marked(this.flashcards[this.currentIndex].answer)
+        return marked(this.flashcards[this.currentIndex].answer, {sanitize: true})
       }
-    },
-    mounted() {
-      console.log(this.flashcards)
     },
     methods: {
       nextCard() {
@@ -54,9 +51,6 @@
         } else {
           this.currentIndex--
         }
-      },
-      flipCard() {
-
       }
     }
   }
@@ -66,16 +60,27 @@
   .flex-container {
     display: flex;
     align-items: center;
-    min-height: 100vh;
+    margin-top: 50px;
     .card {
       flex-grow: 1;
       height: 50vh;
     }
     .card-header {
       color: #fff;
+      height: 15%;
     }
     .card-body {
-      overflow: auto;
+      height: 70%;
+      div.question, div.answer {
+        overflow: auto;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+      }
+    }
+    .card-footer {
+      height: 15%;
     }
   }
 </style>

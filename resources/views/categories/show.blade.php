@@ -57,10 +57,4 @@
 
 </section>
 
-{{-- <question-list :cards="{{ $cards }}"></question-list> --}}
-{{-- <flashcard></flashcard> --}}
-
-{{-- @include('modals.add-flashcard')
-@include('modals.edit-flashcard') --}}
-
 @endsection

@@ -13976,7 +13976,7 @@ module.exports = Cancel;
 /***/ (function(module, exports, __webpack_require__) {
 
 __webpack_require__(13);
-module.exports = __webpack_require__(50);
+module.exports = __webpack_require__(55);
 
 
 /***/ }),
@@ -48871,7 +48871,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 
   computed: {
     markdown: function markdown() {
-      return marked(this.input);
+      return marked(this.input, { sanitize: true });
     },
     label: function label() {
       switch (this.type) {
@@ -49080,13 +49080,13 @@ if (false) {
 var disposed = false
 function injectStyle (ssrContext) {
   if (disposed) return
-  __webpack_require__(55)
+  __webpack_require__(48)
 }
 var normalizeComponent = __webpack_require__(3)
 /* script */
-var __vue_script__ = __webpack_require__(48)
+var __vue_script__ = __webpack_require__(53)
 /* template */
-var __vue_template__ = __webpack_require__(59)
+var __vue_template__ = __webpack_require__(54)
 /* template functional */
 var __vue_template_functional__ = false
 /* styles */
@@ -49126,83 +49126,46 @@ module.exports = Component.exports
 
 /***/ }),
 /* 48 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
+/***/ (function(module, exports, __webpack_require__) {
 
-"use strict";
-Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
+// style-loader: Adds some css to the DOM by adding a <style> tag
 
-/* harmony default export */ __webpack_exports__["default"] = ({
-  props: ['category', 'flashcards'],
-  data: function data() {
-    return {
-      showQuestion: true,
-      currentIndex: 0
-    };
-  },
-
-  computed: {
-    question: function question() {
-      return marked(this.flashcards[this.currentIndex].question);
-    },
-    answer: function answer() {
-      return marked(this.flashcards[this.currentIndex].answer);
-    }
-  },
-  mounted: function mounted() {
-    console.log(this.flashcards);
-  },
-
-  methods: {
-    nextCard: function nextCard() {
-      this.showQuestion = true;
-      if (this.currentIndex === this.flashcards.length - 1) {
-        this.currentIndex = 0;
-      } else {
-        this.currentIndex++;
-      }
-    },
-    previousCard: function previousCard() {
-      this.showQuestion = true;
-      if (this.currentIndex === 0) {
-        this.currentIndex = this.flashcards.length - 1;
-      } else {
-        this.currentIndex--;
-      }
-    },
-    flipCard: function flipCard() {}
-  }
-});
+// load the styles
+var content = __webpack_require__(49);
+if(typeof content === 'string') content = [[module.i, content, '']];
+if(content.locals) module.exports = content.locals;
+// add the styles to the DOM
+var update = __webpack_require__(51)("4f0f1b6e", content, false, {});
+// Hot Module Replacement
+if(false) {
+ // When the styles change, update the <style> tags
+ if(!content.locals) {
+   module.hot.accept("!!../../../../node_modules/css-loader/index.js!../../../../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-7624c96a\",\"scoped\":true,\"hasInlineConfig\":true}!../../../../node_modules/sass-loader/lib/loader.js!../../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./Flashcards.vue", function() {
+     var newContent = require("!!../../../../node_modules/css-loader/index.js!../../../../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-7624c96a\",\"scoped\":true,\"hasInlineConfig\":true}!../../../../node_modules/sass-loader/lib/loader.js!../../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./Flashcards.vue");
+     if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
+     update(newContent);
+   });
+ }
+ // When the module is disposed, remove the <style> tags
+ module.hot.dispose(function() { update(); });
+}
 
 /***/ }),
-/* 49 */,
+/* 49 */
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__(50)(false);
+// imports
+
+
+// module
+exports.push([module.i, "\n.flex-container[data-v-7624c96a] {\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-align: center;\n      -ms-flex-align: center;\n          align-items: center;\n  margin-top: 50px;\n}\n.flex-container .card[data-v-7624c96a] {\n    -webkit-box-flex: 1;\n        -ms-flex-positive: 1;\n            flex-grow: 1;\n    height: 50vh;\n}\n.flex-container .card-header[data-v-7624c96a] {\n    color: #fff;\n    height: 15%;\n}\n.flex-container .card-body[data-v-7624c96a] {\n    height: 70%;\n}\n.flex-container .card-body div.question[data-v-7624c96a], .flex-container .card-body div.answer[data-v-7624c96a] {\n      overflow: auto;\n      height: 100%;\n      display: -webkit-box;\n      display: -ms-flexbox;\n      display: flex;\n      -webkit-box-align: center;\n          -ms-flex-align: center;\n              align-items: center;\n      -ms-flex-wrap: wrap;\n          flex-wrap: wrap;\n}\n.flex-container .card-footer[data-v-7624c96a] {\n    height: 15%;\n}\n", ""]);
+
+// exports
+
+
+/***/ }),
 /* 50 */
-/***/ (function(module, exports) {
-
-// removed by extract-text-webpack-plugin
-
-/***/ }),
-/* 51 */,
-/* 52 */
 /***/ (function(module, exports) {
 
 /*
@@ -49284,49 +49247,7 @@ function toComment(sourceMap) {
 
 
 /***/ }),
-/* 53 */,
-/* 54 */,
-/* 55 */
-/***/ (function(module, exports, __webpack_require__) {
-
-// style-loader: Adds some css to the DOM by adding a <style> tag
-
-// load the styles
-var content = __webpack_require__(56);
-if(typeof content === 'string') content = [[module.i, content, '']];
-if(content.locals) module.exports = content.locals;
-// add the styles to the DOM
-var update = __webpack_require__(57)("4f0f1b6e", content, false, {});
-// Hot Module Replacement
-if(false) {
- // When the styles change, update the <style> tags
- if(!content.locals) {
-   module.hot.accept("!!../../../../node_modules/css-loader/index.js!../../../../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-7624c96a\",\"scoped\":true,\"hasInlineConfig\":true}!../../../../node_modules/sass-loader/lib/loader.js!../../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./Flashcards.vue", function() {
-     var newContent = require("!!../../../../node_modules/css-loader/index.js!../../../../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-7624c96a\",\"scoped\":true,\"hasInlineConfig\":true}!../../../../node_modules/sass-loader/lib/loader.js!../../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./Flashcards.vue");
-     if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
-     update(newContent);
-   });
- }
- // When the module is disposed, remove the <style> tags
- module.hot.dispose(function() { update(); });
-}
-
-/***/ }),
-/* 56 */
-/***/ (function(module, exports, __webpack_require__) {
-
-exports = module.exports = __webpack_require__(52)(false);
-// imports
-
-
-// module
-exports.push([module.i, "\n.flex-container[data-v-7624c96a] {\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-align: center;\n      -ms-flex-align: center;\n          align-items: center;\n  min-height: 100vh;\n}\n.flex-container .card[data-v-7624c96a] {\n    -webkit-box-flex: 1;\n        -ms-flex-positive: 1;\n            flex-grow: 1;\n    height: 50vh;\n}\n.flex-container .card-header[data-v-7624c96a] {\n    color: #fff;\n}\n.flex-container .card-body[data-v-7624c96a] {\n    overflow: auto;\n}\n", ""]);
-
-// exports
-
-
-/***/ }),
-/* 57 */
+/* 51 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /*
@@ -49345,7 +49266,7 @@ if (typeof DEBUG !== 'undefined' && DEBUG) {
   ) }
 }
 
-var listToStyles = __webpack_require__(58)
+var listToStyles = __webpack_require__(52)
 
 /*
 type StyleObject = {
@@ -49554,7 +49475,7 @@ function applyToTag (styleElement, obj) {
 
 
 /***/ }),
-/* 58 */
+/* 52 */
 /***/ (function(module, exports) {
 
 /**
@@ -49587,7 +49508,71 @@ module.exports = function listToStyles (parentId, list) {
 
 
 /***/ }),
-/* 59 */
+/* 53 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
+/* harmony default export */ __webpack_exports__["default"] = ({
+  props: ['category', 'flashcards'],
+  data: function data() {
+    return {
+      showQuestion: true,
+      currentIndex: 0
+    };
+  },
+
+  computed: {
+    question: function question() {
+      return marked(this.flashcards[this.currentIndex].question, { sanitize: true });
+    },
+    answer: function answer() {
+      return marked(this.flashcards[this.currentIndex].answer, { sanitize: true });
+    }
+  },
+  methods: {
+    nextCard: function nextCard() {
+      this.showQuestion = true;
+      if (this.currentIndex === this.flashcards.length - 1) {
+        this.currentIndex = 0;
+      } else {
+        this.currentIndex++;
+      }
+    },
+    previousCard: function previousCard() {
+      this.showQuestion = true;
+      if (this.currentIndex === 0) {
+        this.currentIndex = this.flashcards.length - 1;
+      } else {
+        this.currentIndex--;
+      }
+    }
+  }
+});
+
+/***/ }),
+/* 54 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var render = function() {
@@ -49617,8 +49602,14 @@ var render = function() {
       _vm._v(" "),
       _c("div", { staticClass: "card-body" }, [
         _vm.showQuestion
-          ? _c("p", { domProps: { innerHTML: _vm._s(_vm.question) } })
-          : _c("p", { domProps: { innerHTML: _vm._s(_vm.answer) } })
+          ? _c("div", {
+              staticClass: "question",
+              domProps: { innerHTML: _vm._s(_vm.question) }
+            })
+          : _c("div", {
+              staticClass: "answer",
+              domProps: { innerHTML: _vm._s(_vm.answer) }
+            })
       ]),
       _vm._v(" "),
       _c("div", { staticClass: "card-footer" }, [
@@ -49652,6 +49643,12 @@ if (false) {
     require("vue-hot-reload-api")      .rerender("data-v-7624c96a", module.exports)
   }
 }
+
+/***/ }),
+/* 55 */
+/***/ (function(module, exports) {
+
+// removed by extract-text-webpack-plugin
 
 /***/ })
 /******/ ]);

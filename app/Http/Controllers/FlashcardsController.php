@@ -15,14 +15,11 @@ class FlashcardsController extends Controller
   }
 
   public function store(Request $request, Category $category)
-  {
-    dd($category);
-    
+  { 
     $f = new Flashcard;
-    $f->category_id = $request->category_id;
+    $f->category_id = $category->id;
     $f->question = $request->question;
     $f->answer = $request->answer;
-    $f->category = $category->name;
     $f->save();
 
     return back()->with('status', 'Flashcard Created');

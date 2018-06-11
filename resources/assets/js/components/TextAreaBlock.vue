@@ -31,7 +31,7 @@
       }
     },
     computed: {
-      markdown() { return marked(this.input); },
+      markdown() { return marked(this.input, {sanitize: true}) },
       label() {
         switch(this.type) {
           case 'question':
@@ -44,7 +44,7 @@
       }
     },
     mounted() {
-      this.textareaHeight = this.$refs.textarea.offsetHeight;
+      this.textareaHeight = this.$refs.textarea.offsetHeight
     }
   }
 </script>
