@@ -52,6 +52,17 @@
         } else {
           this.currentIndex--
         }
+      },
+      //Fisher-Yates shuffle, https://bost.ocks.org/mike/shuffle/
+      shuffle(array) {
+        var m = array.length, t, i
+        while(m) {
+          i = Math.floor(Math.random() * m--)
+          t = array[m]
+          array[m] = array[i]
+          array[i] = t
+        }
+        return array
       }
     },
     mounted() {
@@ -64,6 +75,13 @@
         if (option === 'unknown') {
           this.flashcards = this.allcards.filter(card => card.known === 0)
         }
+      })
+
+      this.$root.$on('shuffle', () => {
+        this.flashcards = this.shuffle(this.flashcards)
+        this.showQuestion = true
+        this.currentIndex = 1
+        this.currentIndex = 0
       })
     }
   }

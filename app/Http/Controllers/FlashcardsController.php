@@ -22,7 +22,7 @@ class FlashcardsController extends Controller
     $f->answer = $request->answer;
     $f->save();
 
-    return back()->with('status', 'Flashcard Created');
+    return redirect()->action('CategoriesController@show', ['id' => $category->id])->with('status', 'Flashcard Created');
   }
 
   public function edit(Category $category, Flashcard $flashcard)

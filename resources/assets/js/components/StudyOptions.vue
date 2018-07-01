@@ -11,6 +11,12 @@
 					<label for="unknown">Unknown Cards</label>
 					<input type="radio" id="unknown" name="options" value="unknown" v-model="selected">
 				</div>
+				<div class="form-group shuffle-btn">
+					<button class="btn btn-warning" @click="shuffle()">
+						<i class="fas fa-spinner fa-spin" v-if="shuffling"></i>
+						<span v-else>Shuffle</span>
+					</button>
+				</div>
 			</div>
 		</div>
 	</div>
@@ -20,13 +26,22 @@
 	export default {
 		data() {
 			return {
-				selected: 'all'
+				selected: 'all',
+				shuffling: false
 			}
 		},
 		methods: {
 			toggle(option) {
 				this.selected = option
 				this.$root.$emit('updateOptions', option)
+			},
+			shuffle() {
+				this.shuffling = true 
+				setTimeout(() => {
+					this.$root.$emit('shuffle')
+					this.shuffling = false
+				}, 500)
+				
 			}
 		}
 	}
@@ -54,8 +69,16 @@
 		input:hover {
 			cursor: pointer;
 		}
-		&:first-child {
+		&:first-child,
+		&:nth-child(2) {
 			border-bottom: 1px solid rgba(0, 0, 0, 0.125);
+		}
+		&.shuffle-btn:hover {
+			cursor: inherit;
+			background-color: #fff;
+		}
+		.btn {
+			width: 100%;
 		}
 	}
 	
