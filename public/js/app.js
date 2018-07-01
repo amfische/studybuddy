@@ -49545,10 +49545,10 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 
   computed: {
     question: function question() {
-      return marked(this.flashcards[this.currentIndex].question, { sanitize: true });
+      return this.flashcards[this.currentIndex].question;
     },
     answer: function answer() {
-      return marked(this.flashcards[this.currentIndex].answer, { sanitize: true });
+      return this.flashcards[this.currentIndex].answer;
     }
   },
   methods: {

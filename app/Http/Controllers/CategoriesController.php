@@ -64,6 +64,12 @@ class CategoriesController extends Controller
   public function study(Category $category)
   {
     $flashcards = Flashcard::where('category_id', $category->id)->get();
+
+    foreach ($flashcards as $f) {
+      $f->question = Markdown::convertToHtml($f->question);
+      $f->answer = Markdown::convertToHtml($f->answer);
+    }
+
     return view('categories.study', ['flashcards' => $flashcards, 'category' => $category]);
   }
 

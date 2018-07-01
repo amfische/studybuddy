@@ -29,10 +29,10 @@
     },
     computed: {
       question() {
-        return marked(this.flashcards[this.currentIndex].question, {sanitize: true})
+        return this.flashcards[this.currentIndex].question
       },
       answer() {
-        return marked(this.flashcards[this.currentIndex].answer, {sanitize: true})
+        return this.flashcards[this.currentIndex].answer
       }
     },
     methods: {
