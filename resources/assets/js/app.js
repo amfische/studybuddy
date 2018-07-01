@@ -20,6 +20,7 @@ window.Vue = require('vue');
 Vue.component('text-area-block', require('./components/TextAreaBlock.vue'));
 Vue.component('checkmark', require('./components/Checkmark.vue'));
 Vue.component('flashcards', require('./components/Flashcards.vue'));
+Vue.component('study-options', require('./components/StudyOptions.vue'));
 
 const app = new Vue({
   el: '#app'

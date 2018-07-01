@@ -20,11 +20,12 @@
 
 <script>
   export default {
-    props: ['category', 'flashcards'],
+    props: ['category', 'allcards'],
     data() {
       return {
         showQuestion: true,
-        currentIndex: 0
+        currentIndex: 0,
+        flashcards: this.allcards
       }
     },
     computed: {
@@ -52,6 +53,18 @@
           this.currentIndex--
         }
       }
+    },
+    mounted() {
+      this.$root.$on('updateOptions', (option) => {
+        this.showQuestion = true
+        this.currentIndex = 0
+        if (option === 'all') {
+          this.flashcards = this.allcards
+        }
+        if (option === 'unknown') {
+          this.flashcards = this.allcards.filter(card => card.known === 0)
+        }
+      })
     }
   }
 </script>
@@ -63,7 +76,7 @@
     margin-top: 50px;
     .card {
       flex-grow: 1;
-      height: 50vh;
+      height: 64vh;
     }
     .card-header {
       color: #fff;
