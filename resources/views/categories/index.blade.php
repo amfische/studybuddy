@@ -2,7 +2,7 @@
 
 @section('content')
 
-<section class="categories">
+<section class="categories index">
 
 	{{-- 	@if (session('status'))
     <div class="alert alert-success">
@@ -10,7 +10,7 @@
     </div>
 	@endif --}}
 	
-	<div class="heading-index d-flex justify-content-between align-items-center">
+	<div class="heading d-flex justify-content-between align-items-center">
 		<h1>Categories</h1>
 		<button class="btn btn-info" data-toggle="modal" data-target="#addCategory">Add Category</button>
 	</div>

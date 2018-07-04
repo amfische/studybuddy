@@ -1,0 +1,36 @@
+.categories.show {
+	.back-link-container{
+		margin: 25px 0;
+		a {
+			display: inline-block;
+			margin-right: 35px;
+			&:hover {
+				text-decoration: none;
+			}
+		}
+		.alert {
+			margin: 0;
+			padding: 5px;
+			text-align: center;
+			i.far {
+				line-height: inherit;
+			}
+		}
+	}
+	.table-responsive {
+		margin-top: 2rem;
+	}
+	tr.extra-row i.disable {
+		color: #d3d3d3;
+		text-decoration: line-through;
+	}
+	.questions-heading {
+		margin-bottom: 1rem;
+	}
+	i:hover {
+		cursor: pointer;
+	}
+	.list-group-item:hover {
+		cursor: pointer;
+	}
+}

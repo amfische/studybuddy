@@ -2,15 +2,18 @@
 
 @section('content')
 
-<section class="categories">
+<section class="categories show">
 
-	@if (session('status'))
-    <div class="alert alert-success">
-      {{ session('status') }}
-    </div>
-	@endif
+	<div class="d-flex back-link-container align-items-center">
+		<a href="{{ route('allCategories') }}"><i class="far fa-arrow-alt-circle-left"></i> Back to categories</a>
+		@if (session('status'))
+	    <div class="alert alert-success flex-grow-1">
+	      {{ session('status') }}
+	      <i class="far fa-times-circle float-right"></i>
+	    </div>
+		@endif
+	</div>
 	
-	<a href="{{ route('allCategories') }}" class="back-link"><i class="far fa-arrow-alt-circle-left"></i> Back to categories</a>
 
 	<div class="heading-show d-flex justify-content-between align-items-center">
 		<h1>{{ $category->name }}</h1>	

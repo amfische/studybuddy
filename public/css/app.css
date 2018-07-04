@@ -10438,58 +10438,67 @@ a.text-dark:focus {
   letter-spacing: 2px;
 }
 
-.categories {
-  /* index.blade.php */
-  /* show.blade.php */
-}
-
-.categories .heading-index {
+.categories.index .heading {
   margin: 30px 0;
   border-bottom: 2px solid #000;
 }
 
-.categories .heading-show {
+.categories.index .heading-show {
   padding: 0 5px;
 }
 
-.categories h1 {
+.categories.index h1 {
   margin: 0;
   font-family: 'Roboto', sans-serif;
   font-size: 4rem;
 }
 
-.categories .card-title {
+.categories.index .card-title {
   margin: 0;
   font-family: 'Montserrat', sans-serif;
 }
 
-.categories a.back-link {
-  display: inline-block;
+.categories.show .back-link-container {
   margin: 25px 0;
 }
 
-.categories a:hover {
+.categories.show .back-link-container a {
+  display: inline-block;
+  margin-right: 35px;
+}
+
+.categories.show .back-link-container a:hover {
   text-decoration: none;
 }
 
-.categories .table-responsive {
+.categories.show .back-link-container .alert {
+  margin: 0;
+  padding: 5px;
+  text-align: center;
+}
+
+.categories.show .back-link-container .alert i.far {
+  line-height: inherit;
+}
+
+.categories.show .table-responsive {
   margin-top: 2rem;
 }
 
-.categories tr.extra-row i.disable {
+.categories.show tr.extra-row i.disable {
   color: #d3d3d3;
   text-decoration: line-through;
 }
 
-.categories .questions-heading {
+.categories.show .questions-heading {
   margin-bottom: 1rem;
 }
 
-.categories i:hover {
+.categories.show i:hover {
   cursor: pointer;
 }
 
-.categories .list-group-item:hover {
+.categories.show .list-group-item:hover {
   cursor: pointer;
 }
 
@@ -10504,6 +10513,14 @@ a.text-dark:focus {
 
 .flashcards .heading h1 {
   font-size: 4em;
+}
+
+.flashcards .errors-msg-block {
+  margin-top: 1rem;
+}
+
+.flashcards .errors-msg-block ul {
+  margin: 0;
 }
 
 .flashcards .text-area-block {

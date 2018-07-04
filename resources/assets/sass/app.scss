@@ -12,7 +12,8 @@
 // Welcome Page 
 @import "welcomePage";
 
-@import "categories";
+@import "_categories/index";
+@import "_categories/show";
 @import "flashcards";
 
 .nav-item {

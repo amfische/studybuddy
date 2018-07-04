@@ -16,6 +16,11 @@ class FlashcardsController extends Controller
 
   public function store(Request $request, Category $category)
   { 
+    $request->validate([
+      'question' => 'required',
+      'answer' => 'required'
+    ]);
+
     $f = new Flashcard;
     $f->category_id = $category->id;
     $f->question = $request->question;
@@ -32,7 +37,11 @@ class FlashcardsController extends Controller
 
   public function update(Request $request, Category $category, Flashcard $flashcard)
   {
-    // dd($request->all(), $flashcard);
+    $request->validate([
+      'question' => 'required',
+      'answer' => 'required'
+    ]);
+    
     $flashcard->question = $request->question;
     $flashcard->answer = $request->answer;
     $flashcard->save();
