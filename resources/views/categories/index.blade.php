@@ -20,7 +20,7 @@
 		@foreach ($categories as $c)
 			<div class="col-sm-12 col-md-4" style="margin: 25px 0;">
 				<div class="card" style="background-color: {{ $c->color }}">
-					<a href="{{ action('CategoriesController@show', ['id' => $c->id]) }}">
+					<a href="{{ route('showCategory', ['id' => $c->id]) }}">
 						<div class="card-body">
 							<h4 class="card-title text-white text-center">{{ $c->name }}</h4>
 						</div>

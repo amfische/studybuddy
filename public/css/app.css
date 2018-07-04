@@ -10499,36 +10499,41 @@ a.text-dark:focus {
 
 .flashcards a.back-link {
   display: inline-block;
-  margin-top: 25px;
+  margin: 25px 0;
 }
 
-.flashcards h1.heading {
-  margin: 15px 0;
-  padding: 12px 0;
-  border-bottom: 1.5px solid black;
+.flashcards .heading h1 {
+  font-size: 4em;
 }
 
 .flashcards .text-area-block {
   margin-bottom: 40px;
 }
 
-.flashcards .markdown-container {
-  font-family: 'Montserrat', sans-serif;
+.flashcards .text-area-block h1.heading {
+  margin: 15px 0;
+  padding: 12px 0;
+  border-bottom: 1.5px solid black;
 }
 
-.flashcards .markdown-container div {
+.flashcards .text-area-block .markdown-container {
+  font-family: 'Montserrat', sans-serif;
+  overflow: scroll;
+}
+
+.flashcards .text-area-block .markdown-container .marked {
   overflow: auto;
   background-color: #343a40;
   border: 1px solid #ced4da;
   color: #fff;
 }
 
-.flashcards .markdown-container textarea {
+.flashcards .text-area-block .markdown-container textarea {
   border: 1px solid #368add;
 }
 
 .flashcards input[type=submit] {
-  margin: 15px 0;
+  margin: 15px 0 4em 0;
 }
 
 .nav-item {

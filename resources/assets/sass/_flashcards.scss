@@ -2,33 +2,37 @@
 	font-family: 'Roboto', sans-serif;
 	a.back-link {
 		display: inline-block;
-		margin-top: 25px;
+		margin: 25px 0;
 	}
-
-	h1.heading {
-		margin: 15px 0;
-		padding: 12px 0;
-		border-bottom: 1.5px solid black;
+	.heading {
+		h1 {
+			font-size: 4em;
+		}
 	}
 
 	.text-area-block {
 		margin-bottom: 40px;
-	}
-
-	.markdown-container {
-		font-family: 'Montserrat', sans-serif;
-		div {
-			overflow: auto;
-			background-color: #343a40;
-			border: 1px solid #ced4da;
-			color: #fff;
+		h1.heading {
+			margin: 15px 0;
+			padding: 12px 0;
+			border-bottom: 1.5px solid black;
 		}
-		textarea {
-			border: 1px solid #368add;
+		.markdown-container {
+			font-family: 'Montserrat', sans-serif;
+			overflow: scroll;
+			.marked {
+				overflow: auto;
+				background-color: #343a40;
+				border: 1px solid #ced4da;
+				color: #fff;
+			}
+			textarea {
+				border: 1px solid #368add;
+			}
 		}
 	}
 
 	input[type=submit] {
-		margin: 15px 0;
+		margin: 15px 0 4em 0;
 	}
 }

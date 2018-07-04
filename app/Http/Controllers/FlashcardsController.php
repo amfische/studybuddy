@@ -22,13 +22,11 @@ class FlashcardsController extends Controller
     $f->answer = $request->answer;
     $f->save();
 
-    return redirect()->action('CategoriesController@show', ['id' => $category->id])->with('status', 'Flashcard Created');
+    return redirect()->route('showCategory', ['id' => $category->id])->with('status', 'Flashcard Created');
   }
 
   public function edit(Category $category, Flashcard $flashcard)
   {
-    // dd($category, $flashcard);
-
     return view('flashcards.edit', ['card' => $flashcard]);
   }
 
@@ -39,7 +37,7 @@ class FlashcardsController extends Controller
     $flashcard->answer = $request->answer;
     $flashcard->save();
 
-    return view('flashcards.edit', ['card' => $flashcard]);
+    return redirect()->route('showCategory', ['id' => $category->id])->with('status', 'Flashcard Updated');
   }
 
   public function statusUpdate(Request $request) 

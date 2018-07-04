@@ -4,7 +4,7 @@
 
 <section class="row categories">
 
-	<a href="{{ action('CategoriesController@show', [$category->id]) }}" class="back-link col-sm-12"><i class="far fa-arrow-alt-circle-left"></i> Back to {{ $category->name }}</a>
+	<a href="{{ route('showCategory', [$category->id]) }}" class="back-link col-sm-12"><i class="far fa-arrow-alt-circle-left"></i> Back to {{ $category->name }}</a>
 
 	<div class="col-md-3">
 		<study-options></study-options>

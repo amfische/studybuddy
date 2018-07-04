@@ -15,15 +15,16 @@ Route::get('/', function () {
   return view('welcome');
 });
 
-Route::get('/flashcards', 'FlashcardsController@index');
-Route::post('/categories/{category}/flashcard/create', 'FlashcardsController@store');
-Route::get('/categories/{category}/flashcard/create', 'FlashcardsController@create');
-Route::get('/categories/{category}/flashcard/{flashcard}', 'FlashcardsController@edit');
-Route::put('/categories/{category}/flashcard/{flashcard}', 'FlashcardsController@update');
+Route::get('/categories', 'CategoriesController@index')->name('allCategories');
+Route::get('/categories/{id}', 'CategoriesController@show')->name('showCategory');
+Route::post('/categories', 'CategoriesController@store')->name('storeCategory');
+Route::get('/categories/{category}/study', 'CategoriesController@study')->name('study');
 
-Route::get('/categories', 'CategoriesController@index');
-Route::get('/categories/{id}', 'CategoriesController@show');
-Route::post('/categories', 'CategoriesController@store');
-Route::get('/categories/{category}/study', 'CategoriesController@study');
+Route::prefix('/categories/{category}')->group(function() {
+	Route::get('flashcard/create', 'FlashcardsController@create')->name('createCard');
+	Route::post('flashcard/create', 'FlashcardsController@store')->name('storeCard');
+	Route::get('flashcard/{flashcard}', 'FlashcardsController@edit')->name('editCard');
+	Route::put('flashcard/{flashcard}', 'FlashcardsController@update')->name('updateCard');
+});
 
 Route::get('/testing', 'TestsController@testXSS');
