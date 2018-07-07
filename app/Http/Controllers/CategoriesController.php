@@ -15,33 +15,25 @@ class CategoriesController extends Controller
 		return view('categories.index', ['categories' => $c]);
 	}
 
-	public function show($id)
+	public function show(Category $category)
   {
-    $category = Category::find($id);
-    $cards = Flashcard::where('category_id', $id)->paginate(5);
+    $cards = Flashcard::where('category_id', $category->id)->get();
 
     foreach ($cards as $card) {
       $card->question = Markdown::convertToHtml($card->question);
     }
 
-    // $categories = array();
-    // foreach (Category::all() as $c) {
-    // 	$categories[$c->id] = $c->name;
+    // $offset = 5;
+    // if (count($cards) % 5 !== 0) {
+    //   $offset = (ceil(count($cards)/5) * 5) - count($cards);
+    // } else if (count($cards) % 5 === 0 && count($cards)) {
+    //   $offset = 0;
     // }
-
-    $offset = 5;
-    if (count($cards) % 5 !== 0) {
-      $offset = (ceil(count($cards)/5) * 5) - count($cards);
-    } else if (count($cards) % 5 === 0 && count($cards)) {
-      $offset = 0;
-    }
 
     $data = [
     	'category' => $category,
-    	'cards' => $cards,
-      'offset' => $offset
+    	'cards' => $cards->toJson(),
     ];
-    // return $data;
 
   	return view('categories.show', $data);
   }

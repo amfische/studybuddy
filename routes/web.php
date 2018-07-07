@@ -16,7 +16,7 @@ Route::get('/', function () {
 });
 
 Route::get('/categories', 'CategoriesController@index')->name('allCategories');
-Route::get('/categories/{id}', 'CategoriesController@show')->name('showCategory');
+Route::get('/categories/{category}', 'CategoriesController@show')->name('showCategory');
 Route::post('/categories', 'CategoriesController@store')->name('storeCategory');
 Route::get('/categories/{category}/study', 'CategoriesController@study')->name('study');
 

@@ -23,7 +23,9 @@
 		</div>
 	</div>
 
-	<div class="table-responsive">
+	<questions-table :cards="{{ $cards }}"></questions-table>
+
+	{{-- <div class="table-responsive">
 		<table class="table table-bordered">
 			<thead class="thead-dark">
 				<tr>
@@ -37,7 +39,7 @@
 			<tbody>
 				@foreach($cards as $card)
 					<tr class="text-center">
-						<td>{{ $card->id }}</td>
+						<td>{{ $loop->index + 1 }}</td>
 						<td>{!! $card->question !!}</td>
 						<td><checkmark :id="{{ $card->id }}" :studied="{{ $card->known }}"></checkmark></td>
 						<td><a href="{{ route('editCard', ['flashcard' => $card->id, 'category' => $card->category_id]) }}"><i class="fas fa-edit"></i></a></td>
@@ -56,7 +58,7 @@
 			</tbody>
 		</table>
 		{{ $cards->links() }}
-	</div>
+	</div> --}}
 
 </section>
 
