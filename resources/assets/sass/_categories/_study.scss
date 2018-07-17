@@ -1,0 +1,12 @@
+.categories.study {
+	.back-link-container{
+		margin: 25px 0;
+		a {
+			display: inline-block;
+			margin-right: 35px;
+			&:hover {
+				text-decoration: none;
+			}
+		}
+	}
+}

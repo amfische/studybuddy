@@ -15,6 +15,7 @@
 				<tr class="text-center" v-for="(card, index) in paginatedCards">
 					<td>{{ index + 1 }}</td>
 					<td v-html="card.question"></td>
+					<!-- <td>{{card.question}}</td> -->
 					<td>
 						<checkmark :id="card.id" :studied="card.known"></checkmark>
 					</td>

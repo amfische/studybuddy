@@ -10502,6 +10502,19 @@ a.text-dark:focus {
   cursor: pointer;
 }
 
+.categories.study .back-link-container {
+  margin: 25px 0;
+}
+
+.categories.study .back-link-container a {
+  display: inline-block;
+  margin-right: 35px;
+}
+
+.categories.study .back-link-container a:hover {
+  text-decoration: none;
+}
+
 .flashcards {
   font-family: 'Roboto', sans-serif;
 }
