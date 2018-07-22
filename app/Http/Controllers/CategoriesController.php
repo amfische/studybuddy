@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use GrahamCampbell\Markdown\Facades\Markdown;
+use Illuminate\Support\Facades\Storage;
 use Illuminate\Http\Request;
 use App\Category;
 use App\Flashcard;
@@ -12,7 +13,8 @@ class CategoriesController extends Controller
 	public function index()
 	{
 		$c = Category::all();
-		return view('categories.index', ['categories' => $c]);
+    $img = Storage::disk('public')->url('images/js-logo.png');
+		return view('categories.index', ['categories' => $c, 'img' => $img]);
 	}
 
 	public function show(Category $category)
@@ -23,16 +25,10 @@ class CategoriesController extends Controller
       $card->question = Markdown::convertToHtml($card->question);
     }
 
-    // $offset = 5;
-    // if (count($cards) % 5 !== 0) {
-    //   $offset = (ceil(count($cards)/5) * 5) - count($cards);
-    // } else if (count($cards) % 5 === 0 && count($cards)) {
-    //   $offset = 0;
-    // }
-
     $data = [
     	'category' => $category,
     	'cards' => $cards->toJson(),
+      'img' => Storage::disk('public')->url('images/js-logo.png')
     ];
 
   	return view('categories.show', $data);

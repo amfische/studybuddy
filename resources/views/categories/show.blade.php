@@ -15,8 +15,11 @@
 	</div>
 	
 
-	<div class="heading-show d-flex justify-content-between align-items-center">
-		<h1>{{ $category->name }}</h1>	
+	<div class="heading d-flex justify-content-between align-items-center">
+		<h1 class="d-flex justify-content-between align-items-center">
+			<img src="{{ $img }}" alt="logo">
+			{{ $category->name }}
+		</h1>	
 		<div class="actions">
 			<a href="{{ route('study', ['category' => $category->id]) }}" class="btn btn-success">Study</a>
 			<a href="{{ route('createCard', ['category' => $category->id]) }}" class="btn btn-info">Add Flashcard</a>

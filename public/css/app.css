@@ -10443,18 +10443,18 @@ a.text-dark:focus {
   border-bottom: 2px solid #000;
 }
 
-.categories.index .heading-show {
-  padding: 0 5px;
-}
-
-.categories.index h1 {
+.categories.index .heading h1 {
   margin: 0;
   font-family: 'Roboto', sans-serif;
   font-size: 4rem;
 }
 
+.categories.index .card-img-top img {
+  width: 100%;
+  height: 100%;
+}
+
 .categories.index .card-title {
-  margin: 0;
   font-family: 'Montserrat', sans-serif;
 }
 
@@ -10479,6 +10479,19 @@ a.text-dark:focus {
 
 .categories.show .back-link-container .alert i.far {
   line-height: inherit;
+}
+
+.categories.show .heading {
+  padding: 0 5px;
+}
+
+.categories.show .heading h1 {
+  margin: 0;
+}
+
+.categories.show .heading img {
+  height: 35px;
+  margin-right: 10px;
 }
 
 .categories.show .table-responsive {

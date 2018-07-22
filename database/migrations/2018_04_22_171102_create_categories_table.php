@@ -17,6 +17,7 @@ class CreateCategoriesTable extends Migration
             $table->increments('id');
             $table->char('name');
             $table->char('color');
+            $table->text('description');
             $table->timestamps();
         });
     }

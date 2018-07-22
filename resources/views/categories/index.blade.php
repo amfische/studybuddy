@@ -19,12 +19,19 @@
 	<div class="row">
 		@foreach ($categories as $c)
 			<div class="col-sm-12 col-md-4" style="margin: 25px 0;">
-				<div class="card" style="background-color: {{ $c->color }}">
-					<a href="{{ route('showCategory', ['id' => $c->id]) }}">
-						<div class="card-body">
-							<h4 class="card-title text-white text-center">{{ $c->name }}</h4>
+				<div class="card-deck">
+					<div class="card border-dark">
+						<div class="card-img-top">
+							<img src="{{ $img }}" alt="logo image">
 						</div>
-					</a>
+						<div class="card-body">
+							<h4 class="card-title">{{ $c->name }}</h4>
+							<p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce condimentum sit amet metus quis euismod. Vivamus rhoncus condimentum neque fermentum mollis. Fusce commodo nulla sapien, a accumsan ligula ultricies nec. In et molestie dolor.</p>
+						</div>
+						<div class="card-footer">
+							<button class="btn btn-sm btn-dark float-right" onclick="location.href='{{ url("categories/$c->id") }}'">Enter</button>
+						</div>
+					</div>
 				</div>
 			</div>
 		@endforeach
