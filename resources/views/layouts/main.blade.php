@@ -14,8 +14,13 @@
 
 </head>
 <body>
-	{{-- <nav class="navbar navbar-expand bg-info">
-		<div class="container d-flex justify-content-end">
+	{{-- <nav class="navbar navbar-dark" style="background-color: #caebf2"> --}}
+		<nav class="navbar">
+		<div class="container">
+			<a class="navbar-brand">StudyBuddy</a>	
+		</div>
+		
+		{{-- <div class="container d-flex justify-content-end">
 			<ul class="navbar-nav">
 				<li class="nav-item">
 					<button type="button" class="btn btn-light btn-sm" data-toggle="modal" data-target="#addCard">Add Card</button>
@@ -24,6 +29,12 @@
 					<button type="button" class="btn btn-light btn-sm" data-toggle="modal" data-target="#addCategory">Add Category</button>
 				</li>
 			</ul>
+		</div> --}}
+	</nav>
+
+	{{-- <nav>
+		<div class="navbar-logo">
+			StudyBuddy
 		</div>
 	</nav> --}}
 

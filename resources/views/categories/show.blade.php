@@ -4,7 +4,7 @@
 
 <section class="categories show">
 
-	<div class="d-flex back-link-container align-items-center">
+	{{-- <div class="d-flex back-link-container align-items-center">
 		<a href="{{ route('allCategories') }}"><i class="far fa-arrow-alt-circle-left"></i> Back to categories</a>
 		@if (session('status'))
 	    <div class="alert alert-success flex-grow-1">
@@ -12,12 +12,12 @@
 	      <i class="far fa-times-circle float-right"></i>
 	    </div>
 		@endif
-	</div>
+	</div> --}}
 	
 
 	<div class="heading d-flex justify-content-between align-items-center">
 		<h1 class="d-flex justify-content-between align-items-center">
-			<img src="{{ $img }}" alt="logo">
+			{{-- <img src="{{ $img }}" alt="logo"> --}}
 			{{ $category->name }}
 		</h1>	
 		<div class="actions">

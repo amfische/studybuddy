@@ -1,11 +1,12 @@
 .categories.index {
 	.heading {
-		margin: 30px 0;
-		border-bottom: 2px solid #000;
+		margin: 50px 0 0 0;
+		border-bottom: 1px solid #000;
+		padding: 5px 12px;
 		h1 {
 			margin: 0;
-			font-family: 'Roboto', sans-serif;
-			font-size: 4rem;
+			font-family: 'Montserrat', sans-serif;
+			font-size: 1.5rem;
 		}
 	}
 
@@ -16,5 +17,22 @@
 
 	.card-title {
 		font-family: 'Montserrat', sans-serif;
+		font-size: 1.25rem;
+		color: #fff;
+	}
+
+	.card-body {
+		background-color: $stormy;
+	}
+
+	.card-footer {
+		padding: 0;
+		button {
+			background-color: $white;
+			color: $evening;
+			font-size: 0.9rem;
+			width: 100%;
+			border-radius: 0 0 .25rem .25rem;
+		}
 	}
 }

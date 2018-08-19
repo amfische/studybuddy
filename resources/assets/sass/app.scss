@@ -1,7 +1,7 @@
 
 // Fonts
 @import url("https://fonts.googleapis.com/css?family=Raleway:300,400,600");
-@import url('https://fonts.googleapis.com/css?family=Montserrat|Roboto');
+@import url('https://fonts.googleapis.com/css?family=Montserrat|Raleway');
 
 // Variables
 @import "variables";
@@ -17,6 +17,24 @@
 @import "_categories/study";
 @import "flashcards";
 
+body {
+	// background-color: $cloud;
+}
+
+.navbar {
+	background-color: $evening;
+}
+
+.navbar-brand {
+	font-size: 2rem;
+	font-family: 'Montserrat', sans-serif;
+	font-weight: 800;
+	color: #fff !important;
+	&:hover {
+		color: #fff !important;
+		cursor: pointer;
+	}
+}
 .nav-item {
 	margin: 0 10px; 
 }
