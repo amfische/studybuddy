@@ -2,6 +2,13 @@
 	<div>
 
 		<table class="table table-bordered">
+			<colgroup>
+				<col style="width: 7%">
+				<col style="width: 72%">
+				<col style="width: 7%">
+				<col style="width: 7%">
+				<col style="width: 7%">
+			</colgroup>
 			<thead class="thead-dark">
 				<tr>
 					<th scope="col">ID</th>
@@ -29,7 +36,7 @@
 			</tbody>
 		</table>
 
-	  <ul class="pagination">
+	  <ul class="pagination pagination-sm">
 	    <li class="page-item" :class="{'disabled': pageNumber === 0}">
 	    	<span class="page-link" @click="previousPage">Previous</span>
 	    </li>

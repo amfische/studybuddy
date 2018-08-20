@@ -21,8 +21,8 @@
 			{{ $category->name }}
 		</h1>	
 		<div class="actions">
-			<a href="{{ route('study', ['category' => $category->id]) }}" class="btn btn-success">Study</a>
-			<a href="{{ route('createCard', ['category' => $category->id]) }}" class="btn btn-info">Add Flashcard</a>
+			<a href="{{ route('study', ['category' => $category->id]) }}" class="btn btn-success btn-sm">Study</a>
+			<a href="{{ route('createCard', ['category' => $category->id]) }}" class="btn btn-info btn-sm">Add Flashcard</a>
 		</div>
 	</div>
 

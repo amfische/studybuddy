@@ -50090,6 +50090,13 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
 
 
 
@@ -50141,6 +50148,8 @@ var render = function() {
     _c("table", { staticClass: "table table-bordered" }, [
       _vm._m(0),
       _vm._v(" "),
+      _vm._m(1),
+      _vm._v(" "),
       _c(
         "tbody",
         _vm._l(_vm.paginatedCards, function(card, index) {
@@ -50173,7 +50182,7 @@ var render = function() {
               )
             ]),
             _vm._v(" "),
-            _vm._m(1, true)
+            _vm._m(2, true)
           ])
         })
       )
@@ -50181,7 +50190,7 @@ var render = function() {
     _vm._v(" "),
     _c(
       "ul",
-      { staticClass: "pagination" },
+      { staticClass: "pagination pagination-sm" },
       [
         _c(
           "li",
@@ -50242,6 +50251,22 @@ var render = function() {
   ])
 }
 var staticRenderFns = [
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("colgroup", [
+      _c("col", { staticStyle: { width: "7%" } }),
+      _vm._v(" "),
+      _c("col", { staticStyle: { width: "72%" } }),
+      _vm._v(" "),
+      _c("col", { staticStyle: { width: "7%" } }),
+      _vm._v(" "),
+      _c("col", { staticStyle: { width: "7%" } }),
+      _vm._v(" "),
+      _c("col", { staticStyle: { width: "7%" } })
+    ])
+  },
   function() {
     var _vm = this
     var _h = _vm.$createElement

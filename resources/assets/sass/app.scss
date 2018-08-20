@@ -36,5 +36,31 @@ body {
 	}
 }
 .nav-item {
-	margin: 0 10px; 
+	color: white;
+	.nav-link {
+		color: white;
+	}
+	&:hover {
+		cursor: pointer;
+	}
+}
+
+.nav-tabs {
+	.nav-link.active,
+	.nav-item.show .nav-link {
+		color: white;
+		background-color: $evening;
+		border-color: white white $evening white;
+	}
+}
+
+.dropdown-menu {
+	background-color: $evening;
+	color: white;
+	border: 1px solid white;
+}
+
+.dropdown-item:hover {
+	background-color: $cloud;
+	cursor: pointer;
 }

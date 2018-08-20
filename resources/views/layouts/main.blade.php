@@ -14,10 +14,24 @@
 
 </head>
 <body>
-	{{-- <nav class="navbar navbar-dark" style="background-color: #caebf2"> --}}
-		<nav class="navbar">
+	<nav class="navbar navbar-expand-lg">
 		<div class="container">
-			<a class="navbar-brand">StudyBuddy</a>	
+			<a class="navbar-brand">StudyBuddy</a>
+			<ul class="navbar-nav">
+				<li class="nav-item" id="home-link">
+					<a href="{{ url('/categories')}}" class="nav-link">Categories</a>
+				</li>
+				{{-- <li class="nav-item dropdown" id="dropdown-link">
+				  <a class="nav-link dropdown-toggle" role="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+				    Dropdown
+				  </a>
+				  <div class="dropdown-menu" aria-labelledby="dropdownMenu2">
+				    <a class="dropdown-item">Action</a>
+				    <a class="dropdown-item">Another action</a>
+				    <a class="dropdown-item">Something else here</a>
+				  </div>
+				</li> --}}
+			</ul>
 		</div>
 		
 		{{-- <div class="container d-flex justify-content-end">
@@ -31,12 +45,6 @@
 			</ul>
 		</div> --}}
 	</nav>
-
-	{{-- <nav>
-		<div class="navbar-logo">
-			StudyBuddy
-		</div>
-	</nav> --}}
 
 	<div class="container" id="app">
 		@yield('content')	
