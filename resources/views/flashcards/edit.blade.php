@@ -3,17 +3,10 @@
 @section('content')
 
 <section class="flashcards">
-
-	<a href="{{ route('showCategory', [$card->category_id]) }}" class="back-link">
-		<i class="far fa-arrow-alt-circle-left"></i> Back to Questions
-	</a>
 	
 	<div class="heading d-flex justify-content-between align-items-center">
-		<h1>{{ $card->category->name }}</h1>	
-		<div class="d-flex flex-column align-items-end">
-			<h2>Edit</h2>
-			<h5>Flashcards support Markdown | <a href="https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet" target="_blank">Cheatsheet</a></h5>
-		</div>
+		<h1><a href="{{ route('showCategory', [$card->category_id]) }}"><i class="fas fa-arrow-circle-left"></i></a> {{ $card->category->name }} | Edit</h1>	
+		<h5>Flashcards support Markdown, <a href="https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet" target="_blank">Cheatsheet</a></h5>
 	</div>
 
 	@if ($errors->any())

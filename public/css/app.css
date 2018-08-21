@@ -10565,8 +10565,16 @@ a.text-dark:focus {
   margin: 25px 0;
 }
 
+.flashcards .heading {
+  margin-top: 50px;
+}
+
 .flashcards .heading h1 {
-  font-size: 4em;
+  font-size: 1.5rem;
+}
+
+.flashcards .heading h5 {
+  font-size: 1.15rem;
 }
 
 .flashcards .errors-msg-block {
@@ -10584,7 +10592,7 @@ a.text-dark:focus {
 .flashcards .text-area-block h1.heading {
   margin: 15px 0;
   padding: 12px 0;
-  border-bottom: 1.5px solid black;
+  border-bottom: 1px solid black;
 }
 
 .flashcards .text-area-block .markdown-container {

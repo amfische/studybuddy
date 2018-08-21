@@ -5,8 +5,12 @@
 		margin: 25px 0;
 	}
 	.heading {
+		margin-top: 50px;
 		h1 {
-			font-size: 4em;
+			font-size: 1.5rem;
+		}
+		h5 {
+			font-size: 1.15rem;
 		}
 	}
 
@@ -22,7 +26,7 @@
 		h1.heading {
 			margin: 15px 0;
 			padding: 12px 0;
-			border-bottom: 1.5px solid black;
+			border-bottom: 1px solid black;
 		}
 		.markdown-container {
 			font-family: 'Montserrat', sans-serif;
